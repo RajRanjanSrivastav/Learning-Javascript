@@ -1,22 +1,22 @@
-// let car = function(color,model)
-// {
-//     this.color=color;
-//     this.model=model;
-// }
-// console.log(car.prototype)
+let car = function(color,model)
+{
+    this.color=color;
+    this.model=model;
+}
+console.log(car.prototype)
 
-// // console.log(car);
-// car.prototype.price=function()
-// {
-//     console.log('price hai 5k')
-// }
-// let result = new car('black','2023')
-// let secon = new car('white',2024);
-// console.log(result,secon)
-// result.price()
+// console.log(car);
+car.prototype.price=function()
+{
+    console.log('price hai 5k')
+}
+let result = new car('black','2023')
+let secon = new car('white',2024);
+console.log(result,secon)
+result.price()
 
-//ES6 classes
-//also see the get and set method
+// ES6 classes
+// also see the get and set method
 class Car{
     constructor(color,price)
     {
@@ -44,3 +44,20 @@ thar.startEngine()
 thar.changePrice="12L"
 console.log(thar.tellPrice)
 console.log(thar)
+
+
+
+
+//testing pupose
+// const sirname = "lala"
+// console.log(sirname);
+// (function chai(){
+//     const name = "raj ranjan srivastav"
+//     console.log(`connected to ${name} ${sirname}`)
+// })();
+
+// // in this fucntion if we not include semicolon; then it throw error because compiler excute the fuction but not know where to close so must include semicolon;
+
+// (() => {
+//     console.log(`connected ${sirname}`)
+// })()

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit and remove the element</title>
+</head>
+<body>
+    
+    <ul class="container"></ul>
+    <script>
+    function add(lang){
+        const li = document.createElement('li')
+        li.innerText=`${lang}`
+        document.querySelector('.container').appendChild(li)
+    }
+    const arr=['java','html','css','javascript','reactjs','sql']
+
+    arr.forEach(e => {
+        add(e)
+    });
+
+    // edit
+    const take = document.querySelector('li:nth-child(2)')
+    take.innerText="mai agya yhan par"
+
+    //remove
+    take.remove()
+    </script>
+</body>
+</html>

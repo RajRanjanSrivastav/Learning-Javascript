@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning dom manipulation</title>
+</head>
+<body>
+    <h2 id="title" class="btaoo">hello hey bye! <span style="display: none;">han bhai mai hun</span></h2>
+    <h4>ka re baoo</h4>
+    <ul>
+        <li>home</li>
+        <li>about</li>
+        <li>services</li>
+        <li>contacts  </li>
+    </ul>
+    <ul class="container">
+        <li>monday</li>
+        <li>tuesday</li>
+        <li>wednesday</li>
+        <li>thruesday</li>
+        <li>friday</li>
+        <li>saturday</li>
+        <li>sunday</li>
+    </ul>
+    <script>
+        const parnt = document.querySelector('.container')
+        console.log(parnt)
+        console.log(parnt.children)
+        console.log(parnt.children[0].innerText)
+        console.log(parnt.firstElementChild)
+        console.log(parnt.lastElementChild)
+        const div = document.createElement('div')
+        console.log(div)
+        div.innerText = "aur bhai kaishe ho"
+        div.className="rangde"
+        div.style.backgroundColor="red"
+        document.body.appendChild(div)
+    </script>
+</body>
+
+</html>
