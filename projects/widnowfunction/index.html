@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project with the help of window function</title>
+</head>
+<style>
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+    #wrap{
+        /* border:2px solid red; */
+        width: 400px;
+        /* height: 200px; */
+        margin: 11rem auto;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        color: red;
+    }
+   table,th,td{
+    width: 400px;
+    height: 90px;
+    border: 2px solid rgb(255, 255, 255);
+    text-align: center;
+    font-size: 1.5rem;
+    color: red;
+   }
+</style>
+<body>
+    <div id="wrap">
+      <p>Press any key and see the magic by me......</p>
+    </div>
+</body>
+<script>
+    const insert = document.getElementById('wrap');
+  
+    window.addEventListener('keydown',(e)=>{
+        console.log(insert)
+     insert.innerHTML = `
+     <div class="in">
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>KeyCode</th>
+                <th>Code</th>
+            </tr>  
+            <tr>
+                <td>${e.key===' '?"Space":e.key}</td>
+                <td>${e.keyCode}</td>
+                <td>${e.code}</td>
+            </tr>  
+        </table>
+     </div>`;  
+    });
+</script>
+</html>

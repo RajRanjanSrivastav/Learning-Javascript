@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+</head>
+<style>
+    #box{
+        border: 2px solid rgb(192, 185, 185);
+        box-shadow:24px 21px 31px black;
+        background-color: rgb(48, 46, 46);
+        border-radius: 50%;
+        margin: 5rem auto;
+        text-align: center;
+        width: 400px;
+        height: 400px
+    }
+    #box p{
+        color: white;
+        margin-top: 11rem;
+        font-size: 3.5rem;
+        
+    }
+</style>
+<body>
+    <div id="box">
+        <p id="main">dkfj</p>
+    </div>
+
+    <script>
+      setInterval(function(){
+        const date = new Date();
+        const box = document.getElementById('main')
+        box.innerText=date.toLocaleTimeString();
+      },1000)
+    </script>
+</body>
+</html>

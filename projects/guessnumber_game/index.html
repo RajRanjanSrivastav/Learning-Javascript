@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Number Game</title>
+    <style>
+        body{
+            background-color: bisque;
+        }
+
+        .wrap{
+            text-align: center;
+        }
+        h2{
+            font-size: 3rem;
+        }
+        p{
+            font-size: 1.4rem;
+        }
+       
+        #in{
+            font-size: 0.9rem;
+            padding: 1rem;
+            width: 18rem;
+        }
+        .btn{
+            margin: 1rem;
+        }
+        button{
+            padding: 0.6rem;
+            margin: 0.4rem;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="wrap">
+        <h2>Welcome to Game world</h2>
+        <p>You have 10 chance to predict the correct number</p>
+        <div class="container">
+            <input type="number" id="in" placeholder="Please enter your number btween 1 to 100">
+            <div class="btn">
+                <button onclick="match()">Check</button>
+                <button onclick="restrat()">Restart</button>
+            </div>
+        </div>
+        <p id="show"> 10 chance left</p>
+    </div>
+
+    <script>
+        // console.log(((Math.random()*100)+1).toFixed())
+        var cnt = 10;
+        var rn = ((Math.random()*100)+1).toFixed();
+        function match()
+        {
+           cnt=cnt-1;
+           if(cnt==0)
+           {
+            alert("restart the game")
+           }
+           console.log(rn)
+           const val = document.getElementById('in').value;
+           const ans = document.getElementById('show');
+           if(val==rn)
+           {
+            ans.innerText=`You guessed the right number in ${10-cnt} attemt`
+           }
+           else{
+            ans.innerText=`You have ${cnt} chance left to guess the right number`
+           }
+           console.log(val)
+            
+        }
+        function restrat()
+        {
+            cnt=10;
+            rn = ((Math.random()*100)+1).toFixed();
+            show.innerText=`You have ${cnt} chance left to guess the right number`
+        }
+    </script>
+</body>
+</html>

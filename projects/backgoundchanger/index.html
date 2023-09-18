@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>background color changer</title>
+  </head>
+  <style>
+    .wrap {
+      display: flex;
+      margin-top: 14rem;
+      justify-content: center;
+    }
+    button {
+      padding: 2rem;
+      margin: 1.2rem;
+      background-color: black;
+      border: 2px solid white;
+      color: white;
+      font-size: 1.7rem;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: white;
+      color: black;
+      font-weight: 900;
+    }
+  </style>
+  <body>
+    <div class="wrap">
+      <button id="start">Start</button>
+      <button id="stop">Stop</button>
+    </div>
+    <script>
+      const srt = document.getElementById("start");
+      const stop = document.getElementById("stop");
+      // const bdy = document
+      srt.addEventListener("click", changer);
+      stop.addEventListener("click", stoper);
+      let track;
+      function changer() {
+        track = setInterval(startchanging, 1000);
+
+        function startchanging() {
+          document.body.style.backgroundColor = randomColor();
+        }
+      }
+
+      function randomColor() {
+        let hex = "0123456789ABCDEF";
+        let clr = "#";
+        for (let i = 0; i < 6; i++) {
+          clr += hex[Math.ceil(Math.random() * 16)];
+        }
+        return clr;
+      }
+
+      function stoper() {
+        clearInterval(track);
+      }
+    </script>
+  </body>
+</html>
