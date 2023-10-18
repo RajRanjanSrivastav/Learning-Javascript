@@ -54,5 +54,5 @@ const tinder = {
 //destructuring objects
 
 const {fullname:name} = tinder;
-console.log(name);
+// console.log(name);
 

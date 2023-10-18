@@ -12,7 +12,7 @@ const newNum = new Number(num)  //difining in object and get some properties
 // console.log((Math.random()*10)) //gives value in range 0 to 9
 // console.log((Math.random()*10) + 1)  //gives value in range 1 to 9
 // console.log(Math.floor(Math.random()*10)+1)  //Math.floor is used for avoiding decimal places
-// console.log(Math.round(2.265))  //this round the value
+console.log(Math.round(2.464))  //this round the value
 
 //if we want to a random value in a particular range
 let min = 10

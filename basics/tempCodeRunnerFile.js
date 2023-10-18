@@ -1,0 +1,1 @@
+const sirname = name.substrin

@@ -1,20 +1,20 @@
 const arr = [1,2,3,4,6]
 
-for(const num of arr)
-{
-    // console.log(num)
-}
+// for(const num of arr)
+// {
+//     // console.log(num)
+// }
 
-const greeting = "hello world";
-for (const greet of greeting)
-{
-    if(greet==" ")
-    {
-        // continue
-        break
-    }
-    // console.log(greet)
-}
+// const greeting = "hello world";
+// for (const greet of greeting)
+// {
+//     if(greet==" ")
+//     {
+//         continue
+//         // break
+//     }
+//     console.log(greet)
+// }
 
 //map store values in key-value pair and also remaimber the order of inseration and also have unique value always.
 
@@ -24,9 +24,9 @@ map.set('En',"England")
 
 // for of
 
-// for (const [key,value] of map) {
-//     console.log(key+"-->"+value)
-// }
+for (const [key,value] of map) {
+    console.log(key+"-->"+value)
+}
 
 const myobj = {
     name : "raj ranjan srivastav",

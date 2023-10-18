@@ -1,7 +1,7 @@
 const arr = [1,2,3,4,'raj bahi']
 console.log("a: ",arr)
 const newarr = new Array(1,2,3,'raj bhai')
-// console.log(newarr);
+console.log(newarr);
 
 //difference btween const arr = new Array() and const arr = []
 //the main difference is you can set the size of array in new Array() syntax
