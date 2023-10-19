@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Divide and Multiply</title>
+  </head>
+  <style>
+    #form {
+      border: 2px solid black;
+      width: 700px;
+      height: 400px;
+      margin: auto;
+      background-color: rgba(146, 92, 10, 0.4);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+    }
+    #data {
+      width: 400px;
+      height: 300px;
+      padding: 2rem;
+    }
+    #data input {
+      padding: 0.7rem;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      border: none;
+    }
+    .ans {
+      width: 200px;
+      height: 100px;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    .btn {
+      width: 100px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      border: none;
+      border-radius: 4rem;
+    }
+    .btn:hover {
+      background-color: rgb(162, 59, 213, 0.2);
+      border-radius: 4rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  </style>
+  <body style="background-color: rgb(255, 166, 166, 0.4)">
+    <div id="form">
+      <div id="data">
+        <div>
+          <label for="" style="font-size: 1.3rem; margin-right: 2.4rem"
+            >First Number :</label
+          >
+          <input type="number" id="fData" placeholder="Enter number please" />
+          <br />
+          <label for="" style="font-size: 1.3rem; margin-right: 1rem"
+            >Second Number :</label
+          >
+          <input type="number" id="sData" placeholder="Enter number please" />
+        </div>
+
+        <div>
+          <button
+            class="btn"
+            onclick="calculate('mul', fData.value ,sData.value)"
+          >
+            Multiply
+          </button>
+          <button
+            class="btn"
+            onclick="calculate('div', fData.value,sData.value)"
+          >
+            Divide
+          </button>
+        </div>
+      </div>
+      <div class="ans">
+        <p id="mul">Multiply</p>
+        <p id="div">Divide</p>
+      </div>
+    </div>
+  </body>
+  <script>
+    const calculate = (opr, d1, d2) => {
+      let ans = document.getElementById(opr);
+      console.log(ans + "---" + d1 + "----" + d2);
+      
+      if(opr=="mul")
+      {
+        let res = d1*d2;
+        ans.innerText=`Multiply : ${res}`
+      }
+      else
+      {
+        let res = Math.floor(d1/d2);
+        ans.innerText=`Divide : ${res}`
+      }
+
+    };
+  </script>
+</html>

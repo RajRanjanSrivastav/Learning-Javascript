@@ -1,26 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animate String</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animatation through Javascript</title>
 </head>
-<body onload="animate_string('target')">
-  <pre id="target">w3resource </pre>
-  </body> 
+<style>
+  .box{
+    width: 300px;
+    height: 250px;
+    margin: auto;
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+  }
+
+  .btn{
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    border: none;
+    border-radius: 4rem;
+  }
+  .btn:hover{
+    background-color: rgb(162, 59, 213,0.2);
+    border-radius: 4rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+</style>
+<body style="border-color: rgb(253, 96, 122,0.6);">
+  <div class="box">
+    <p id="target">RAJ RANJAN SRIVASTAV</p>
+  </div>
+  <button class="btn" onclick="task('target')">Click To Animate</button>
+</body>
 <script>
-    function animate_string(id) 
-{
-    var element = document.getElementById(id);
-    var textNode = element.childNodes[0]; // assuming no other children
-    var text = textNode.data;
+  const task = (id) =>{
+    let trg = document.getElementById(id);
+    let data = trg.innerText;
 
-setInterval(function () 
-{
- text = text[text.length - 1] + text.substring(0, text.length - 1);
-  textNode.data = text;
-}, 100);
-}
-
+    setInterval(()=>{
+      console.log(data)
+      data = data.charAt(data.length-1) + data.substring(0,data.length-1);
+      trg.innerText=data;
+    },300)
+  }
 </script>
 </html>
