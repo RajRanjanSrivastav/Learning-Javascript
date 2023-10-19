@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 5rem;
+    }
+    .box{
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        background-color: rgb(201, 95, 20,0.3);
+    }
+    .box:hover{
+        cursor: pointer;
+        background-color: rgb(147, 20, 20,0.7);
+    }
+    #btn{
+        border-radius: 2rem;
+        margin: 1rem;
+        width: 200px;
+        height: 50px;
+    }
+    #btn:hover{
+        background-color: bisque;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box" onmouseover={andar()} onmouseout="bahar()">
+            <p>This is a Box</p>
+        </div>
+        <button onclick="clicked()" id="btn">Click me</button>
+    </div>
+    
+</body>
+<script src="main.js"></script>
+</html>
