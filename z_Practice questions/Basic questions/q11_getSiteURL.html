@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To get the site URL</title>
+</head>
+<body>
+    <p id="demo">Within 3 second we show the URL of this page</p>
+</body>
+<script>
+    setTimeout(()=>{
+    let ans = document.URL;
+    document.getElementById('demo').innerText = ans;
+    },3000)
+    
+</script>
+</html>
