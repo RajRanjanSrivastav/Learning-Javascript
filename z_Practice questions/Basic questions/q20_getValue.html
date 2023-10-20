@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get form value</title>
+</head>
+<body>
+    <form action="" id="main">
+        <label for="">First name :</label>
+        <input type="text" value="raj"> <br>
+        <label for="">First name :</label>
+        <input type="text" value="lala"> <br>
+        <button onclick="Submit" value="Submit">Submit</button>
+    </form>
+    <script>
+        const x = document.getElementById('main');
+        console.log(x);
+        for(let i=0;i<x.length;i++)
+        {
+            if(x.elements[i].value != 'Submit' )
+            {
+                console.log(x.elements[i].value)
+            }
+        }
+    </script>
+</body>
+</html>

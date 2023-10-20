@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom related question</title>
+</head>
+<body id="body">
+    <div class="box">
+        <p id="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis eius temporibus ratione?</p>
+        <!-- <p id="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis eius temporibus ratione?</p>
+        <p id="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis eius temporibus ratione?</p> -->
+        <button id="btn">click</button>
+    </div>
+</body>
+<!-- <script>
+    const btn = document.getElementById('btn');
+    btn.addEventListener('click', ()=>{
+        // const trg = document.getElementById('text');
+        text.style.color='red';
+        window.print()
+    })
+</script> -->
+
+<!-- <script src="html2pdf.bundle.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+const btn = document.getElementById("btn");
+
+btn.addEventListener("click", function(){
+var element = document.getElementById('body');
+html2pdf().from(element).save('filename.pdf');
+});
+</script>
+
+</html>
